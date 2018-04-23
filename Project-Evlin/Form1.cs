@@ -35,12 +35,6 @@ namespace Project_Evlin
             newsadd();
           
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-
-        }
         private void Employment()
         {
             string jsonEmp = rj.getRestData("/employment/");
@@ -202,9 +196,6 @@ namespace Project_Evlin
             pu.Show();
 
         }
-
-
-
         //Function to add introduction content to page
 
         private void Populate()
@@ -282,8 +273,6 @@ namespace Project_Evlin
             tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
             for (var i = 0; i < research.byInterestArea.Count; i++)
             {
-
-
                 for (var j = 0; j < 4; j++)
                 {  // Adding data to tablepanel with 4 columns
                     if (count2 < research.byInterestArea.Count)
@@ -303,10 +292,7 @@ namespace Project_Evlin
                         count2++;
                     }
                 }
-
-
             }
-
         }
 
         void t1_click(object sender, EventArgs e)
@@ -321,7 +307,6 @@ namespace Project_Evlin
         //Function to Research Faculty contents to page
         private void ResearchFaculty()
         {
-
             // get the JSON for people
             string jsonPeople = getRestData("/research/");
             Research research = JToken.Parse(jsonPeople).ToObject<Research>();
@@ -351,9 +336,7 @@ namespace Project_Evlin
                 }
 
             }
-
         }
-
         void name_click(object sender, EventArgs e)
         {
             int m = Int32.Parse(((Label)sender).Name);
@@ -392,12 +375,9 @@ namespace Project_Evlin
                         p1.Click += p1_click;
                     }
                 }
-
             }
             for (var i = 0; i < people.staff.Count; i++)
             {
-
-
                 for (var j = 0; j < 5; j++)
                 {
                     if (count2 < people.staff.Count)
@@ -416,9 +396,7 @@ namespace Project_Evlin
                     }
                 }
             }
-
         }
-
         void p1_click(object sender, EventArgs e)
         {
             int m = Int32.Parse(((PictureBox)sender).Name);
@@ -433,68 +411,6 @@ namespace Project_Evlin
             String cat = "staff";
             peopleform pu = new peopleform(this, m, cat);
             pu.Show();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTabPage1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cooptable_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
